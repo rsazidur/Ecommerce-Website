@@ -1,5 +1,5 @@
 import React from 'react'
-import bannerImg from '/images/banner.jpg'
+import bannerImg from '/images/banner2.png'
 import { FaShoppingBag } from 'react-icons/fa'
 
 const Banner = () => {
@@ -7,7 +7,7 @@ const Banner = () => {
     <div className='bg-primary py-12 xl:px-28 px-4'>
         <div className='py-28 flex flex-col md:flex-row-reverse justify-between items-center gap-14'>
             {/* img */}
-            <div className='md:w-1/2'>
+            <div className='md:w-1/2 md:ml-30'>
                 <img src={bannerImg} alt=''/>
             </div>
             <div className='md:w-1/2'>
