@@ -29,20 +29,22 @@ const Products = () => {
       const filtered = platform === "all" ? products : products.filter((item) => item.category === platform);
       setFilteredItems(filtered);
       setSelectedCategory(platform);
+      handleSortChange(sortOption, filtered); // Apply sorting after filtering
     }
     
     // Show all products
     const showAll = () => {
       setFilteredItems(products);
       setSelectedCategory("all");
+      handleSortChange(sortOption, products); // Apply sorting after showing all
     }
 
     // Sorting function
-    const handleSortChange = (option) => {
+    const handleSortChange = (option, items = filteredItems) => {
       setSortOption(option);
 
       // Sort the items based on the selected option
-      let sortedItems = [...filteredItems];
+      let sortedItems = [...items];
 
       switch (option) {
         case "A-Z":
